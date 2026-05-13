@@ -308,7 +308,7 @@ transform:translate(-50%,-50%);
 </a>
 
 <a href="https://youtube.com/@cryonixvfxofficial?si=yLVwCCqpt4wL_EFy" target="_blank">
-<button>YouTube</button>
+<button>YOUTUBE</button>
 
 
 <footer>
