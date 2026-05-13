@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -340,6 +339,3 @@ cursor.style.left = e.clientX + "px";
 });
 
 </script>
-
-</body>
-</html>
