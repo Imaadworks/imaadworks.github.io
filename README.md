@@ -1,270 +1,427 @@
+```html
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Imaad Danish | Developer Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imaad Danish | Robotics Portfolio</title>
+    <meta
+      name="description"
+      content="Imaad Danish is a robotics enthusiast building intelligent systems with Arduino, IoT, AI, and embedded technologies."
+    />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7137046406068065"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<style>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top">
+          <span class="brand-mark">ID</span>
+          <span class="brand-text">Imaad Danish</span>
+        </a>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Courier New", Courier, monospace;
-scroll-behavior:smooth;
-}
+        <nav class="site-nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-body{
-background:#020617;
-color:#e2e8f0;
-}
+      <main id="top">
+        <section class="hero section">
+          <div class="hero-copy">
+            <p class="eyebrow">Robotics Portfolio</p>
 
-/* NAVBAR */
+            <h1>
+              I build
+              <span class="accent">smart machines</span>
+              that turn ideas into real-world systems.
+            </h1>
 
-nav{
-position:fixed;
-width:100%;
-top:0;
-padding:15px;
-text-align:center;
-background:#020617;
-border-bottom:1px solid #22c55e;
-z-index:1000;
-}
+            <p class="hero-text">
+              I'm Imaad Danish, a robotics enthusiast focused on Arduino, IoT,
+              AI, and embedded technology. I also build mobile apps, iOS
+              experiences, Windows software, and websites. I love designing
+              useful digital and physical systems that solve real problems.
+            </p>
 
-nav a{
-margin:0 20px;
-text-decoration:none;
-color:#22c55e;
-font-weight:bold;
-}
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">
+                Explore Projects
+              </a>
 
-nav a:hover{
-color:#0ea5e9;
-}
+              <a class="button button-secondary" href="#contact">
+                Let's Connect
+              </a>
+            </div>
 
-/* HERO */
+            <div class="hero-metrics">
+              <article>
+                <strong>15+</strong>
+                <span>builds across hardware and software</span>
+              </article>
 
-header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
+              <article>
+                <strong>Apps + Web + Robotics</strong>
+                <span>multi-platform creator stack</span>
+              </article>
 
-header h1{
-font-size:60px;
-color:#22c55e;
-text-shadow:0 0 12px #22c55e;
-}
+              <article>
+                <strong>AI mindset</strong>
+                <span>future-ready builder with big ambition</span>
+              </article>
+            </div>
+          </div>
 
-.typing{
-margin-top:15px;
-font-size:20px;
-border-right:2px solid #22c55e;
-white-space:nowrap;
-overflow:hidden;
-width:0;
-animation:typing 4s steps(40,end) forwards, blink 0.7s infinite;
-}
+          <div class="hero-visual">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
 
-@keyframes typing{
-to{width:100%}
-}
+            <article class="identity-card">
+              <div class="profile-frame">
+                <img
+                  class="profile-image"
+                  src="profile.jpeg"
+                  alt="Portrait of Imaad Danish"
+                />
+              </div>
 
-@keyframes blink{
-50%{border-color:transparent}
-}
+              <p class="card-label">Creator Profile</p>
 
-/* SECTIONS */
+              <h2>Imaad Danish</h2>
 
-section{
-padding:90px 10%;
-opacity:0;
-transform:translateY(40px);
-transition:0.6s;
-}
+              <p class="role-switch" data-role-switch>
+                Robotics Enthusiast
+              </p>
 
-section.show{
-opacity:1;
-transform:translateY(0);
-}
+              <ul class="signal-list">
+                <li>Autonomous robots</li>
+                <li>Smart IoT systems</li>
+                <li>Apps, websites, and software</li>
+              </ul>
+            </article>
 
-h2{
-margin-bottom:20px;
-color:#0ea5e9;
-}
+            <article class="floating-note note-top">
+              <span>Current focus</span>
+              <strong>AI + automation + robotics + apps</strong>
+            </article>
 
-/* TERMINAL CARDS */
+            <article class="floating-note note-bottom">
+              <span>Goal</span>
+              <strong>
+                Build intelligent systems and products that people remember
+              </strong>
+            </article>
+          </div>
+        </section>
 
-.card{
-background:#000;
-border:1px solid #22c55e;
-padding:20px;
-border-radius:8px;
-margin-bottom:20px;
-box-shadow:0 0 10px rgba(34,197,94,0.3);
-}
+        <section class="section split-section" id="about">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About Me</p>
+            <h2>Engineering curiosity into working prototypes.</h2>
+          </div>
 
-/* SKILLS */
+          <div class="about-grid">
+            <article class="glass-card reveal">
+              <p>
+                I enjoy building smart and autonomous systems using Arduino,
+                sensors, embedded components, and connected devices. My work
+                also extends into mobile app development, iOS, Windows software,
+                and modern websites.
+              </p>
+            </article>
 
-.skill{
-margin:15px 0;
-}
+            <article class="glass-card reveal">
+              <p>
+                From line-following robots to smart home automation and
+                interactive apps, I like combining hardware and software into
+                projects that move, react, and feel alive.
+              </p>
+            </article>
 
-.bar{
-height:8px;
-background:#0f172a;
-border-radius:5px;
-overflow:hidden;
-}
+            <article class="glass-card reveal">
+              <p>
+                With 15+ builds already completed, I’m pushing toward even more
+                ambitious work by blending AI, automation, robotics, and
+                full-stack product thinking.
+              </p>
+            </article>
+          </div>
+        </section>
 
-.fill{
-height:100%;
-background:#22c55e;
-width:0;
-transition:1.5s;
-}
+        <section class="section" id="projects">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Featured Work</p>
+            <h2>Projects that reflect how I think and build.</h2>
+          </div>
 
-/* PROJECTS GRID */
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <span class="project-index">01</span>
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+              <h3>Line Following Robot</h3>
 
-.project{
-background:#000;
-border:1px solid #0ea5e9;
-padding:20px;
-border-radius:8px;
-transition:0.3s;
-}
+              <p>
+                An autonomous robot that uses IR sensors for path detection and
+                corrects its movement in real time for smoother navigation.
+              </p>
 
-.project:hover{
-box-shadow:0 0 15px #0ea5e9;
-transform:scale(1.05);
-}
+              <div class="project-tags">
+                <span>Arduino</span>
+                <span>IR Sensors</span>
+                <span>Autonomy</span>
+              </div>
+            </article>
 
-/* CONTACT */
+            <article class="project-card reveal">
+              <span class="project-index">02</span>
 
-button{
-padding:10px 18px;
-margin:10px;
-border:none;
-border-radius:5px;
-background:#22c55e;
-color:black;
-font-weight:bold;
-cursor:pointer;
-}
+              <h3>Obstacle Avoiding Robot</h3>
 
-button:hover{
-background:#0ea5e9;
-color:white;
-}
+              <p>
+                A smart navigation robot that detects obstacles with ultrasonic
+                sensing and changes direction to move safely through space.
+              </p>
 
-/* FOOTER */
+              <div class="project-tags">
+                <span>Ultrasonic</span>
+                <span>Robotics</span>
+                <span>Embedded Logic</span>
+              </div>
+            </article>
 
-footer{
-text-align:center;
-padding:20px;
-border-top:1px solid #22c55e;
-}
+            <article class="project-card reveal">
+              <span class="project-index">03</span>
 
-/* CURSOR GLOW */
+              <h3>Smart Home Automation</h3>
 
-.cursor{
-position:fixed;
-width:15px;
-height:15px;
-background:#22c55e;
-border-radius:50%;
-pointer-events:none;
-mix-blend-mode:screen;
-box-shadow:0 0 15px #22c55e;
-transform:translate(-50%,-50%);
-}
+              <p>
+                An IoT-based control system designed to manage appliances and
+                bring connected convenience into everyday living.
+              </p>
 
-</style>
-</head>
+              <div class="project-tags">
+                <span>IoT</span>
+                <span>Automation</span>
+                <span>Smart Systems</span>
+              </div>
+            </article>
 
-<body>
+            <article class="project-card reveal">
+              <span class="project-index">04</span>
 
-<div class="cursor" id="cursor"></div>
+              <h3>Bluetooth / Wi-Fi Controlled Car</h3>
 
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+              <p>
+                A wireless robotic car controlled through a mobile interface,
+                blending remote communication with responsive movement.
+              </p>
 
-<header>
-<h1>Imaad Danish</h1>
-<div class="typing">> Developer | AI | Robotics | Automation</div>
-</header>
+              <div class="project-tags">
+                <span>Bluetooth</span>
+                <span>Wi-Fi</span>
+                <span>Mobile Control</span>
+              </div>
+            </article>
 
-<section id="about">
-<h2>About</h2>
-<div class="card">
-<p>I design and build intelligent systems, apps, and automation tools using modern technologies.</p>
-</div>
-</section>
+            <article class="project-card reveal">
+              <span class="project-index">05</span>
 
-<section id="skills">
-<h2>Skills</h2>
+              <h3>Mobile App Development</h3>
 
-<div class="card">
+              <p>
+                I create mobile experiences that turn ideas into practical,
+                usable products with clean flows and real-world purpose.
+              </p>
 
-<div class="skill">
-<p>Python</p>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-</div>
+              <div class="project-tags">
+                <span>Android</span>
+                <span>iOS</span>
+                <span>UI Thinking</span>
+              </div>
+            </article>
 
-<div class="skill">
-<p>Flutter</p>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-</div>
+            <article class="project-card reveal">
+              <span class="project-index">06</span>
 
-<div class="skill">
-<p>AI</p>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
+              <h3>Websites and Software Builds</h3>
 
-</div>
+              <p>
+                I also build websites and Windows-based software, combining
+                interface design with logic, functionality, and strong visual
+                presentation.
+              </p>
 
-</section>
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>Web Design</span>
+                <span>Windows Apps</span>
+              </div>
+            </article>
+          </div>
+        </section>
 
-<section id="projects">
-<h2>Projects</h2>
+        <section class="section skills-section" id="skills">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Capability Stack</p>
+            <h2>Tools and technologies behind my builds.</h2>
+          </div>
 
-<div class="projects">
+          <div class="skills-layout">
+            <div class="skill-cloud reveal">
+              <span>Arduino</span>
+              <span>C++</span>
+              <span>Python</span>
+              <span>IoT</span>
+              <span>Embedded Systems</span>
+              <span>Mobile Apps</span>
+              <span>iOS</span>
+              <span>Windows</span>
+              <span>HTML</span>
+              <span>Website Making</span>
+              <span>Sensors</span>
+              <span>Actuators</span>
+              <span>Automation</span>
+              <span>AI Exploration</span>
+            </div>
 
-<div class="project">
-<h3>> AI Chatbot</h3>
-<p>Machine learning chatbot system.</p>
-</div>
+            <div class="skill-panels reveal">
+              <article class="skill-panel">
+                <h3>Hardware Thinking</h3>
 
-<div class="project">
-<h3>> Security Camera</h3>
-<p>Live surveillance mobile app.</p>
-</div>
+                <p>
+                  I like building systems that sense, respond, and interact with
+                  the physical world in meaningful ways.
+                </p>
+              </article>
 
-<div class="project">
-<h3>> Automation Scripts</h3>
-<p>Workflow automation tools.</p>
-</div>
+              <article class="skill-panel">
+                <h3>Software Control</h3>
 
-</div>
+                <p>
+                  I use code to give machines behavior, precision, and products
+                  the logic needed to feel smooth, useful, and responsive.
+                </p>
+              </article>
 
-</section>
-<h2>Technologia // 67</h2>
+              <article class="skill-panel">
+                <h3>Platform Range</h3>
+
+                <p>
+                  I build across robotics, websites, mobile apps, iOS, and
+                  Windows, so I can shape ideas into experiences on many
+                  different platforms.
+                </p>
+              </article>
+
+              <article class="skill-panel">
+                <h3>Future Direction</h3>
+
+                <p>
+                  My next step is combining robotics with AI to create even more
+                  capable, adaptive, and memorable solutions.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+          <div class="contact-card reveal">
+            <div>
+              <p class="eyebrow">Contact</p>
+
+              <h2>Let’s build something exciting.</h2>
+
+              <p class="contact-copy">
+                If you want to collaborate, connect, or see more of my work, you
+                can reach me through the links below.
+              </p>
+            </div>
+
+            <div class="contact-links">
+              <a href="mailto:khaleekahmand@gmail.com">
+                khaleekahmand@gmail.com
+              </a>
+
+              <a
+                href="https://wa.me/919997554431"
+                target="_blank"
+                rel="noreferrer"
+              >
+                WhatsApp: +91 9997554431
+              </a>
+
+              <a
+                href="https://github.com/imaadworks"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+
+              <a
+
+href="https://youtube.com/@cryonixvfxofficial?si=Y_CE3KVsPjoIDU1r"
+                target="_blank"
+                rel="noreferrer"
+              >
+                YouTube
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 Imaad Danish. Built for the future of robotics.</p>
+      </footer>
+    </div>
+
+    <button
+      class="easter-toggle"
+      type="button"
+      aria-label="Open hidden lab"
+      data-easter-toggle
+    >
+      67
+    </button>
+
+    <section
+      class="easter-panel"
+      aria-hidden="true"
+      data-easter-panel
+    >
+      <button
+        class="easter-close"
+        type="button"
+        aria-label="Close hidden lab"
+        data-easter-close
+      >
+        ×
+      </button>
+
+      <p class="eyebrow">Hidden Lab</p>
+
+      <h2>Technologia // 67</h2>
+
       <p>
+        A tiny secret corner for the people who actually click around. Pure
+        chaos, pure energy.
       </p>
+
       <div class="easter-embed-grid">
         <div class="easter-embed">
           <iframe
@@ -276,67 +433,21 @@ transform:translate(-50%,-50%);
             title="67 soundboard"
           ></iframe>
         </div>
+
         <div class="easter-embed">
-        <iframe
-          width="110"
-          height="200"
-          src="https://www.myinstants.com/instant/technologia-53863/embed/"
-          frameborder="0"
-          scrolling="no"
-          title="Technologia soundboard"
-        ></iframe>
+          <iframe
+            width="110"
+            height="200"
+            src="https://www.myinstants.com/instant/technologia-53863/embed/"
+            frameborder="0"
+            scrolling="no"
+            title="Technologia soundboard"
+          ></iframe>
         </div>
       </div>
+    </section>
 
     <script src="script.js"></script>
-    
-<section id="contact">
-<h2>CONTACT</h2>
-
-<div class="contact-buttons">
-
-<a href="mailto:khaleekahmand@gmail.com">
-<button>EMAIL</button>
-</a>
-
-<a href="https://github.com/imaadworks" target="_blank">
-<button>GITHUB</button>
-</a>
-
-<a href="https://wa.me/9199975 54431" target="_blank">
-<button>WHATSAPP</button>
-</a>
-
-<a href="https://youtube.com/@cryonixvfxofficial?si=yLVwCCqpt4wL_EFy" target="_blank">
-<button>YOUTUBE</button>
-
-
-<footer>
-<p>© 2026 Imaad Danish | Build for the future of robotics</p>
-</footer>
-
-<script>
-
-/* SCROLL ANIMATION */
-
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-sections.forEach(sec => {
-const top = sec.getBoundingClientRect().top;
-if(top < window.innerHeight - 100){
-sec.classList.add("show");
-}
-});
-});
-
-/* CURSOR EFFECT */
-
-const cursor = document.getElementById("cursor");
-
-document.addEventListener("mousemove", e=>{
-cursor.style.top = e.clientY + "px";
-cursor.style.left = e.clientX + "px";
-});
-
-</script>
+  </body>
+</html>
+```
