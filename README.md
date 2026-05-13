@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Imaad Danish | Tech Portfolio</title>
+<title>Imaad Danish | Developer Portfolio</title>
 
 <style>
 
@@ -10,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Courier New', monospace;
+font-family:Arial, Helvetica, sans-serif;
 scroll-behavior:smooth;
 }
 
@@ -18,20 +19,37 @@ body{
 background:#020617;
 color:#e2e8f0;
 overflow-x:hidden;
+cursor:none;
 }
 
-/* GRID BACKGROUND */
+/* CUSTOM CURSOR */
 
-body::before{
-content:"";
+.cursor{
 position:fixed;
-width:100%;
-height:100%;
-background:
-linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
-linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
-background-size:40px 40px;
-z-index:-1;
+width:15px;
+height:15px;
+border-radius:50%;
+background:#22c55e;
+pointer-events:none;
+box-shadow:0 0 15px #22c55e;
+transform:translate(-50%,-50%);
+z-index:9999;
+}
+
+/* PARTICLES */
+
+.particle{
+position:fixed;
+width:3px;
+height:3px;
+background:#0ea5e9;
+opacity:0.5;
+animation:float 10s linear infinite;
+}
+
+@keyframes float{
+from{transform:translateY(100vh)}
+to{transform:translateY(-10vh)}
 }
 
 /* NAV */
@@ -40,25 +58,18 @@ nav{
 position:fixed;
 width:100%;
 top:0;
-background:#020617cc;
-backdrop-filter:blur(8px);
 padding:15px;
 text-align:center;
-border-bottom:1px solid #0ff;
+background:#020617;
+border-bottom:1px solid #0ea5e9;
+z-index:1000;
 }
 
 nav a{
 margin:0 20px;
-color:#0ff;
+color:#0ea5e9;
 text-decoration:none;
 font-weight:bold;
-letter-spacing:1px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#f0f;
-text-shadow:0 0 10px #f0f;
 }
 
 /* HERO */
@@ -73,27 +84,27 @@ text-align:center;
 }
 
 header h1{
-font-size:70px;
-color:#0ff;
-text-shadow:0 0 20px #0ff, 0 0 40px #0ff;
+font-size:60px;
+color:#22c55e;
+text-shadow:0 0 20px #22c55e;
 }
 
 .typing{
-margin-top:15px;
+margin-top:10px;
 font-size:20px;
-border-right:2px solid #0ff;
+border-right:2px solid #22c55e;
 white-space:nowrap;
 overflow:hidden;
 width:0;
-animation:typing 4s steps(40,end) forwards, blink 0.7s infinite;
+animation:typing 4s steps(40) forwards, blink .7s infinite;
 }
 
 @keyframes typing{
-to{width:350px;}
+to{width:280px}
 }
 
 @keyframes blink{
-50%{border-color:transparent;}
+50%{border-color:transparent}
 }
 
 /* SECTIONS */
@@ -103,82 +114,62 @@ padding:100px 10%;
 }
 
 h2{
-font-size:34px;
-color:#0ff;
-text-shadow:0 0 10px #0ff;
+color:#0ea5e9;
 margin-bottom:20px;
 }
 
-/* CARDS */
+/* GLASS CARDS */
 
 .card{
-background:#020617;
-border:1px solid #0ff;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
 padding:20px;
-border-radius:10px;
-box-shadow:0 0 15px rgba(0,255,255,0.2);
+border-radius:15px;
+margin-bottom:20px;
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 0 25px #0ff;
+box-shadow:0 0 20px #0ea5e9;
 }
 
 /* SKILLS */
 
 .skills span{
 display:inline-block;
-margin:6px;
-padding:8px 14px;
-border:1px solid #0ff;
-border-radius:20px;
-color:#0ff;
-}
-
-/* PROJECT GRID */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+margin:5px;
+padding:10px 15px;
+background:#22c55e;
+color:black;
+border-radius:5px;
+font-weight:bold;
 }
 
 /* CONTACT */
 
-.contact-buttons button{
-background:transparent;
-border:1px solid #0ff;
-color:#0ff;
-padding:10px 20px;
+button{
+padding:12px 20px;
 margin:10px;
+border:none;
+border-radius:6px;
+background:#0ea5e9;
+color:white;
 cursor:pointer;
-transition:0.3s;
-border-radius:5px;
 }
 
-.contact-buttons button:hover{
-background:#0ff;
-color:#020617;
-box-shadow:0 0 20px #0ff;
+button:hover{
+background:#22c55e;
+color:black;
 }
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:25px;
-border-top:1px solid #0ff;
-color:#0ff;
-}
-
-/* GLOW LINE */
-
-.line{
-width:100%;
-height:2px;
-background:linear-gradient(90deg,transparent,#0ff,transparent);
-margin:40px 0;
+padding:20px;
+border-top:1px solid #0ea5e9;
 }
 
 </style>
@@ -186,69 +177,70 @@ margin:40px 0;
 
 <body>
 
+<div class="cursor" id="cursor"></div>
+
+<!-- PARTICLES -->
+<script>
+for(let i=0;i<40;i++){
+let p=document.createElement("div");
+p.className="particle";
+p.style.left=Math.random()*100+"%";
+p.style.animationDuration=(5+Math.random()*5)+"s";
+document.body.appendChild(p);
+}
+</script>
+
 <nav>
-<a href="#about">ABOUT</a>
-<a href="#skills">SKILLS</a>
-<a href="#projects">PROJECTS</a>
-<a href="#contact">CONTACT</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <header>
 <h1>Imaad Danish</h1>
-<div class="typing">> Student | Robotics | Tech_</div>
+<div class="typing">Developer • AI • Robotics • Automation</div>
 </header>
 
 <section id="about">
-<h2>ABOUT</h2>
+<h2>About</h2>
 <div class="card">
-<p>
-Passionate about building futuristic technology, AI systems, and automation tools.
-I love exploring robotics and developing smart solutions for real-world problems.
-</p>
+<p>I create advanced tech solutions with focus on AI, automation, and smart systems.</p>
 </div>
-<div class="line"></div>
 </section>
 
 <section id="skills">
-<h2>SKILLS</h2>
-<div class="skills">
+<h2>Skills</h2>
+<div class="card skills">
 <span>Python</span>
 <span>Flutter</span>
-<span>Web Dev</span>
-<span>AI/ML</span>
+<span>AI</span>
 <span>Robotics</span>
+<span>Web Dev</span>
 </div>
-<div class="line"></div>
 </section>
 
 <section id="projects">
-<h2>PROJECTS</h2>
-
-<div class="projects">
+<h2>Projects</h2>
 
 <div class="card">
 <h3>AI Chatbot</h3>
-<p>Intelligent chatbot with ML logic.</p>
+<p>Smart conversational AI system.</p>
 </div>
 
 <div class="card">
 <h3>Security Camera</h3>
-<p>Live mobile surveillance system.</p>
+<p>Real-time monitoring app.</p>
 </div>
 
 <div class="card">
-<h3>Automation Scripts</h3>
-<p>Task automation tools for efficiency.</p>
+<h3>Automation Tools</h3>
+<p>Efficiency-focused scripts.</p>
 </div>
-
-</div>
-
-<div class="line"></div>
 
 </section>
 
-      
-      <h2>Technologia // 67</h2>
+<h2>Technologia // 67</h2>
       <p>
       </p>
       <div class="easter-embed-grid">
@@ -276,7 +268,7 @@ I love exploring robotics and developing smart solutions for real-world problems
 
     <script src="script.js"></script>
 
-<section id="contact">
+    <section id="contact">
 <h2>CONTACT</h2>
 
 <div class="contact-buttons">
